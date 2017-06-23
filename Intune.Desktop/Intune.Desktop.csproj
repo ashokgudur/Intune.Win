@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA472B10-0935-413A-B3EB-BEFD3F17A6C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intune.Desktop</RootNamespace>
+    <AssemblyName>Intune.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Intune.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InTune.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Source\Repos\InuneWebService\InTune.Domain\bin\Debug\InTune.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="IntuneChat.Model">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Intune\bin\IntuneChat.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommentFormManager.cs" />
+    <Compile Include="FAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAccount.Designer.cs">
+      <DependentUpon>FAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAccountShare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAccountShare.Designer.cs">
+      <DependentUpon>FAccountShare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FComment-1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FComment-1.Designer.cs">
+      <DependentUpon>FComment-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FComment.Designer.cs">
+      <DependentUpon>FComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FContact.Designer.cs">
+      <DependentUpon>FContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FContacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FContacts.Designer.cs">
+      <DependentUpon>FContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEntries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEntries.Designer.cs">
+      <DependentUpon>FEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEntry.Designer.cs">
+      <DependentUpon>FEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUser.Designer.cs">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntuneService.cs" />
+    <Compile Include="NumLength.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ChatHubManager.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="StringCipher.cs" />
+    <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="FAccount.resx">
+      <DependentUpon>FAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAccountShare.resx">
+      <DependentUpon>FAccountShare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FComment-1.resx">
+      <DependentUpon>FComment-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FComment.resx">
+      <DependentUpon>FComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FContact.resx">
+      <DependentUpon>FContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FContacts.resx">
+      <DependentUpon>FContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEntries.resx">
+      <DependentUpon>FEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEntry.resx">
+      <DependentUpon>FEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUser.resx">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Intune.ico" />
+    <None Include="Resources\IntuneComment.ico" />
+    <None Include="Resources\IntuneMain.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
